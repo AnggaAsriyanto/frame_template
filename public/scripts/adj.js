@@ -6,6 +6,23 @@ const imgGrid  = document.querySelectorAll('.grid-list');
 const blogList = document.querySelectorAll('.blog-list');
 const listDet  = document.querySelectorAll('.list');
 const blogDet  = document.querySelectorAll('.blog');
+const brands   = document.querySelectorAll('.brand');
+
+const mybrand = 'zen•webdeveloper•'; // full name or job, adjust with font-size and letter spacing
+brands.forEach(bt => {
+    bt.innerHTML = ` <svg class="circle" viewBox="0 0 200 200">
+                        <path id="curve" d="
+                        M 25, 100
+                        a 25,25 0 1,1 150,0
+                        a 25,25 0 1,1 -150,0
+                        " />
+                        <text class="text">
+                        <textPath xlink:href="#curve" class="text-brand">
+                            ${mybrand}
+                        </textPath>
+                        </text>
+                    </svg>`
+});
 
 // portfolio item
 const imgPort = ['https://images.unsplash.com/photo-1482053450283-3e0b78b09a70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', 'https://images.unsplash.com/photo-1525498128493-380d1990a112?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80', 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80', 'https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80', 'https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', 'https://images.unsplash.com/photo-1502005097973-6a7082348e28?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80'];
@@ -23,7 +40,6 @@ addPortItem(imgGrid);
 
 addBlogItem(blogDet);
 addBlogItem(blogList);
-
 
 imgGrid.forEach((img, idx) => {
     img.addEventListener('click', () => {
