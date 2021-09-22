@@ -2,9 +2,9 @@ const closeBtn = document.getElementById('close');
 const closeBlg = document.getElementById('close-blg');
 const detailP  = document.querySelector('.detail-item-port');
 const detailB  = document.querySelector('.detail-item-blog')
-const imgGrid  = document.querySelectorAll('.grid-list');
+const imgGrid  = document.querySelectorAll('.port-list');
 const blogList = document.querySelectorAll('.blog-list');
-const listDet  = document.querySelectorAll('.list');
+const portDet  = document.querySelectorAll('.port');
 const blogDet  = document.querySelectorAll('.blog');
 const brands   = document.querySelectorAll('.brand');
 
@@ -35,7 +35,7 @@ const dateBlog = ['22 Okt 2021', '21 May 2021']
 const titleBlog = ["Theme is more important than hierarchy, Here's why", 'Reasons you should learn programming in 2021']
 
 
-addPortItem(listDet);
+addPortItem(portDet);
 addPortItem(imgGrid);
 
 addBlogItem(blogDet);
@@ -43,7 +43,7 @@ addBlogItem(blogList);
 
 imgGrid.forEach((img, idx) => {
     img.addEventListener('click', () => {
-        showItem(listDet, detailP, idx);
+        showItem(portDet, detailP, idx);
     })
 })
 
